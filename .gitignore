@@ -1,0 +1,36 @@
+# Ruby specific
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+# Docker specific
+.docker-sync/
+docker-compose.override.yml
+
+# Environment variables
+.env
+.env.*
+
+# Dependency directories
+/vendor/
+/vendor/bundle
+/.bundle/
+/lib/bundler/man/
+
+# Logs
+*.log
+
+# System specific
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
