@@ -40,7 +40,7 @@ docker build -t factoring-quote .
 
 3. Run the container
 ```bash
-docker run -it --rm factoring-app bash
+docker run -it --rm factoring-quote bash
 ```
 4. Run the application
 ```bash

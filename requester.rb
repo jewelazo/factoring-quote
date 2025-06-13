@@ -28,6 +28,7 @@ module Requester
 
   def get_user_data
     {
+      api_key: get_user_input("Ingrese un api-key válido: "),
       seller_rut: get_user_input("Ingrese RUT emisor: "),
       debtor_rut: get_user_input("Ingrese RUT deudor: "),
       invoice_amount: get_user_input("Ingrese monto factura: ", tipo: :integer),

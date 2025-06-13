@@ -6,11 +6,12 @@ require_relative "./requester"
 class FactoringQuote
   include Presenter
   include Requester
-  attr_reader :seller_rut, :debtor_rut, :invoice_amount, :folio, :expiration_date, :term, :quote
+  attr_reader :api_key, :seller_rut, :debtor_rut, :invoice_amount, :folio, :expiration_date, :term, :quote
 
   def initialize
     print_welcome
     datos = get_user_data
+    @api_key = datos[:api_key]
     @seller_rut = datos[:seller_rut]
     @debtor_rut = datos[:debtor_rut]
     @invoice_amount = datos[:invoice_amount]
@@ -38,13 +39,13 @@ class FactoringQuote
 
   def get_api_response
     url = build_quote_url(query_params)
-    headers = { "X-Api-Key" => "pZX5rN8qAdgzCe0cAwpnQQtt" }
+    headers = { "X-Api-Key" => api_key }
 
     response = get(url, headers)
 
     unless response&.success?
       puts "\n⚠️  Error desde la API:"
-      puts response&.parsed_response.to_s
+      puts({ code: response.code, error: response&.parsed_response.to_s })
       exit 1
     end
     response

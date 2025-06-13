@@ -8,7 +8,7 @@ RSpec.describe FactoringQuote do
       debtor_rut: "77360390-1",
       invoice_amount: 1_000_000,
       folio: 75,
-      expiration_date: "2025-07-13"
+      expiration_date: "2025-07-13",
     }
   end
 
@@ -16,7 +16,7 @@ RSpec.describe FactoringQuote do
     {
       "document_rate" => 1.09,
       "commission" => 0.0,
-      "advance_percent" => 99.0
+      "advance_percent" => 99.0,
     }
   end
 
