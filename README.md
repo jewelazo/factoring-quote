@@ -1,6 +1,6 @@
 # Factoring Quote Calculator
 
-A simple Ruby application to calculate factoring quotes based on invoice details and debtor information using https://chita.cl/api/v1/pricing/simple_quote endpoint.
+A simple Ruby application to calculate factoring quotes based on invoice details and debtor information using a external api.
 
 ## Description
 
@@ -22,6 +22,7 @@ The calculator provides:
 - Ruby 3.4+
 - Bundler
 - HTTParty gem
+- Rspec
 
 ## Installation
 
@@ -90,4 +91,4 @@ rspec spec/factoring_quote_spec.rb
 
 ## API Integration
 
-This application uses an external API for quote calculations. Make sure you have a valid API key configured.
+This application uses an external API for quote calculations. Make sure you have a valid API key.
