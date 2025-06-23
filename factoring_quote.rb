@@ -34,7 +34,7 @@ class FactoringQuote
   end
 
   def query_params
-    { seller_rut: seller_rut, debtor_rut: debtor_rut, invoice_amount: invoice_amount, folio: folio, expiration_date: expiration_date }
+    { seller_rut:, debtor_rut: ,invoice_amount:, folio:, expiration_date: }
   end
 
   def get_api_response
